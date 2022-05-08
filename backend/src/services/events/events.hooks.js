@@ -2,7 +2,7 @@
 
 module.exports = {
   before: {
-    all: [],
+    all: [() => console.log('before')],
     find: [],
     get: [],
     create: [],
@@ -12,7 +12,7 @@ module.exports = {
   },
 
   after: {
-    all: [],
+    all: [() => console.log('after')],
     find: [],
     get: [],
     create: [],
