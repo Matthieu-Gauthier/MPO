@@ -2,7 +2,7 @@
 
 module.exports = {
   before: {
-    all: [() => console.log('app before')],
+    all: [],
     find: [],
     get: [],
     create: [],
