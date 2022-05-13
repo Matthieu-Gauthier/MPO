@@ -1,18 +1,20 @@
-// events-model.js - A mongoose model
+// venues-model.js - A mongoose model
 //
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
 module.exports = function (app) {
-  const modelName = 'events';
+  const modelName = 'venues';
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
   const schema = new Schema({
     _id: { type: String, unique: true, required: true, index: true },
     name: { type: String },
-    start_date: { type: Date },
-    end_date: { type: Date },
-    year: { type: Number },
-    competition_id: { type: String, required: true, index: true }, //TODO - Verifier si le champs est utile
+    capacity: { type: Number },
+    city_name: { type: String },
+    country_name: { type: String },
+    map_coordinates: { type: String },
+    country_code: { type: String },
+    state: { type: String },
   }, {
     timestamps: true
   });
