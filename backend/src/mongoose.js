@@ -2,11 +2,14 @@ const mongoose = require('mongoose');
 const logger = require('./logger');
 
 module.exports = function (app) {
-  mongoose.connect(
-    app.get('mongodb')
-  ).catch(err => {
-    logger.error(err);
-    process.exit(1);
+  const server = app.get('mongodb');
+
+  mongoose.connect(server)
+    .then(() => logger.info(`Connexion successful | server: ${server}`))
+    .catch(err => {
+      logger.error(`Connexion error | server: ${server}`);
+      logger.error(`Error; ${err}`);
+      process.exit(1);
   });
 
   app.set('mongooseClient', mongoose);
