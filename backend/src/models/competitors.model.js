@@ -9,7 +9,7 @@ module.exports = function (app) {
   const RecordSchemas = require('./Schemas/record.schema')(Schema);
 
   const schema = new Schema({
-    _id: { type: String, unique: true, required: true, index: true },
+    id: { type: String, unique: true, required: true, index: true },
     name: { type: String },
     nickname: { type: String },
     abbreviation: { type: String },
