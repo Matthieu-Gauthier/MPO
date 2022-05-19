@@ -50,6 +50,7 @@
     "cors": "^2.8.5",
     "feathers-mongoose": "^8.5.1",
     "helmet": "^4.6.0",
+    "moment": "^2.29.3",
     "mongodb-core": "^3.2.7",
     "mongoose": "^6.2.11",
     "serve-favicon": "^2.5.0",

@@ -28,5 +28,12 @@
       "passwordField": "password"
     }
   },
-  "mongodb": "mongodb://192.168.0.200:27017/backend"
+  "mongodb": "mongodb://192.168.0.200:27017/backend",
+  "api": {
+    "baseUrl": "https://api.sportradar.com/mma/trial/v2",
+    "locale": "en",
+    "format": "json",
+    "api_key": "yq6s72gmmuzubvy9fr4293kp"
+  },
+  "ufc": "https://www.ufc.com/athlete/"
 }
