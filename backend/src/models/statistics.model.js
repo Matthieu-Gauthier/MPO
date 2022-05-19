@@ -8,10 +8,10 @@ module.exports = function (app) {
   const { Schema } = mongooseClient;
   const StatisticSchemas = require('./Schemas/statistic.schema')(Schema);
   const schema = new Schema({
-    _id: { type: String, unique: true, required: true, index: true },
+    id: { type: String, unique: true, required: true, index: true },
     fight_id: { type: Schema.Types.String, ref: 'fights' },
     competitor_id: { type: Schema.Types.String, ref: 'competitors' },
-    global: [{ type: StatisticSchemas }],
+    global: { type: StatisticSchemas },
     rounds: [{ type: StatisticSchemas }],
   }, {
     timestamps: true
