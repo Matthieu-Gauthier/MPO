@@ -9,13 +9,13 @@ module.exports = function (app) {
   const SportEventStatusSchemas = require('./Schemas/sportEventStatus.schema')(Schema);
 
   const schema = new Schema({
-    _id: { type: String, unique: true, required: true, index: true },
+    id: { type: String, unique: true, required: true, index: true },
     sport_event_status: { type: SportEventStatusSchemas },
     venueId: { type: Schema.Types.String, ref: 'venues' },
     home_competitor_id: { type: Schema.Types.String, ref: 'competitors' },
     away_competitor_id: { type: Schema.Types.String, ref: 'competitors' },
     start_time: { type: Date },
-    start_time_confirmed: { type: Date },
+    start_time_confirmed: { type: Boolean },
     stageType: { type: String }, //Main Card || Prelims || Early Prelims
     statisticId: { type: Schema.Types.String, ref: 'statistics' },
   }, {
