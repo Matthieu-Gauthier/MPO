@@ -2,8 +2,6 @@ const services = require("axios");
 
 const callAxios = async (app, serviceMapper) => {
   const api = app.get('api');
-  console.log(api)
-  console.log(`${api.baseUrl}${serviceMapper.route}`)
   const result = await services({
     url: `${api.baseUrl}${serviceMapper.route}`,
     method: 'get',

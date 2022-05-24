@@ -26,7 +26,7 @@ const app = express(feathers());
 app.configure(configuration());
 // Enable security, CORS, compression, favicon and body parsing
 app.use(helmet({
-  contentSecurityPolicy: false
+	contentSecurityPolicy: false
 }));
 app.use(cors());
 app.use(compress());
@@ -55,5 +55,9 @@ app.use(express.notFound());
 app.use(express.errorHandler({ logger }));
 
 app.hooks(appHooks);
+
+process.on('unhandledRejection', (reason, p) => {
+	console.log('Unhandled Rejection at: Promise ', p, ' reason: ', reason);
+});
 
 module.exports = app;

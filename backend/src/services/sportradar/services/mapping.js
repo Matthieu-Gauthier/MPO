@@ -1,5 +1,6 @@
 module.exports = (app) => {
   const api = app.get('api');
+  const ufc = app.get('ufc');
 
   return {
     getFight: (id) => ({
@@ -17,6 +18,9 @@ module.exports = (app) => {
     getCompetitorStatistics: (id) => ({
       route: `/${api.locale}/competitors/${id}/summaries.${api.format}`,
       result: 'summaries',
+    }),
+    getPicturesUfc: (name) => ({
+      route: `${ufc}/${name}`
     }),
   };
 };
