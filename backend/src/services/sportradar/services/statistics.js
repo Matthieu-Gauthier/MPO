@@ -1,6 +1,5 @@
 const { findAndUpdateOrCreate } = require('../../../utils');
-
-const { fightConstructor } = require('./fights');
+const { fightConstructor } = require('./fights.js');
 
 const roundConstructor = (data, qualifier) => {
 	const rounds = [];

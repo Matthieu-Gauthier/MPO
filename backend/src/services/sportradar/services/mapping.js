@@ -3,7 +3,7 @@ module.exports = (app) => {
 	const ufc = app.get('ufc');
 
 	return {
-		getFight: (id) => ({
+		getFightSummaries: (id) => ({
 			route: `/${ api.locale }/seasons/${ id }/summaries.${ api.format }`,
 			result: 'summaries',
 		}),

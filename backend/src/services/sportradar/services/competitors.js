@@ -89,6 +89,14 @@ const getCompetitorSummaries = async (app, competitorId) => {
 	return competitorId;
 };
 
+const updateCompetitors = async (app, fights) => {
+	const competitorsIds = fights.flatMap((f) => [f.home_competitor_id, f.away_competitor_id]);
+	for (const id of competitorsIds) {
+		await getCompetitorSummaries(app, id);
+	}
+};
+
 module.exports = {
-	getCompetitorSummaries
+	getCompetitorSummaries,
+	updateCompetitors,
 };

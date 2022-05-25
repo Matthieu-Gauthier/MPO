@@ -1,7 +1,7 @@
 const mapping = require('./mapping');
 const { callAxios, findOrCreate } = require('../../../utils');
 
-const getSeasons = async (app) => {
+const getFutureEvents = async (app) => {
 	const map = mapping(app);
 	const seasons = await callAxios(app, map.getSeasons);
 	const seasonsFilter = seasons.filter(s => s.year >= new Date().getFullYear().toString());
@@ -13,5 +13,5 @@ const getSeasons = async (app) => {
 };
 
 module.exports = {
-	getSeasons,
+	getFutureEvents,
 };
