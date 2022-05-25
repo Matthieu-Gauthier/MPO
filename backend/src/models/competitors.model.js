@@ -26,6 +26,8 @@ module.exports = function (app) {
     height: { type: Number },
     weight: { type: Number },
     record: { type: RecordSchemas },
+    avatar: { type: String },
+    banner: { type: String },
   }, {
     timestamps: true
   });
