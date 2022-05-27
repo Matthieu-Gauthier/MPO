@@ -1,5 +1,6 @@
 # Ignore folder
 /.idea
+/.idea/
 
 # Ignore files
 ./package-lock.json
