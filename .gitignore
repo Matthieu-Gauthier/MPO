@@ -1,5 +1,6 @@
 # Ignore folder
-/node_modules
+/.idea
+/.idea/
 
 # Ignore files
 ./package-lock.json

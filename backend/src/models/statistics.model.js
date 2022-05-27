@@ -1,18 +1,18 @@
-// events-model.js - A mongoose model
+// statistics-model.js - A mongoose model
 //
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
 module.exports = function (app) {
-  const modelName = 'events';
+  const modelName = 'statistics';
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
+  const StatisticSchemas = require('./Schemas/statistic.schema')(Schema);
   const schema = new Schema({
     id: { type: String, unique: true, required: true, index: true },
-    name: { type: String },
-    start_date: { type: Date },
-    end_date: { type: Date },
-    year: { type: Number },
-    competition_id: { type: String, required: true, index: true }, //TODO - Verifier si le champs est utile
+    fight_id: { type: Schema.Types.String, ref: 'fights' },
+    competitor_id: { type: Schema.Types.String, ref: 'competitors' },
+    global: { type: StatisticSchemas },
+    rounds: [{ type: StatisticSchemas }],
   }, {
     timestamps: true
   });

@@ -46,13 +46,17 @@
     "@feathersjs/feathers": "^4.5.12",
     "@feathersjs/socketio": "^4.5.14",
     "@feathersjs/transport-commons": "^5.0.0-pre.20",
+    "cheerio": "^1.0.0-rc.10",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "feathers-mongoose": "^8.5.1",
     "helmet": "^4.6.0",
+    "moment": "^2.29.3",
     "mongodb-core": "^3.2.7",
     "mongoose": "^6.2.11",
+    "request-promise": "^4.2.6",
     "serve-favicon": "^2.5.0",
+    "valid-url": "^1.0.9",
     "winston": "^3.7.2"
   },
   "devDependencies": {

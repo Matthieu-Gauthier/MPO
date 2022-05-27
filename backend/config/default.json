@@ -1,32 +1,39 @@
 {
-  "host": "localhost",
-  "port": 3030,
-  "public": "../public/",
-  "paginate": {
-    "default": 10,
-    "max": 50
-  },
-  "authentication": {
-    "entity": "user",
-    "service": "users",
-    "secret": "k5+1+cfzB0w3AAACSOZRyJNEJqk=",
-    "authStrategies": [
-      "jwt",
-      "local"
-    ],
-    "jwtOptions": {
-      "header": {
-        "typ": "access"
-      },
-      "audience": "https://yourdomain.com",
-      "issuer": "feathers",
-      "algorithm": "HS256",
-      "expiresIn": "1d"
-    },
-    "local": {
-      "usernameField": "email",
-      "passwordField": "password"
-    }
-  },
-  "mongodb": "mongodb://192.168.0.200:27017/backend"
+	"host": "localhost",
+	"port": 3030,
+	"public": "../public/",
+	"paginate": {
+		"default": 1000,
+		"max": 5000
+	},
+	"authentication": {
+		"entity": "user",
+		"service": "users",
+		"secret": "k5+1+cfzB0w3AAACSOZRyJNEJqk=",
+		"authStrategies": [
+			"jwt",
+			"local"
+		],
+		"jwtOptions": {
+			"header": {
+				"typ": "access"
+			},
+			"audience": "https://yourdomain.com",
+			"issuer": "feathers",
+			"algorithm": "HS256",
+			"expiresIn": "1d"
+		},
+		"local": {
+			"usernameField": "email",
+			"passwordField": "password"
+		}
+	},
+	"mongodb": "mongodb://192.168.0.200:27017/backend",
+	"api": {
+		"baseUrl": "https://api.sportradar.com/mma/trial/v2",
+		"locale": "en",
+		"format": "json",
+		"api_key": "yq6s72gmmuzubvy9fr4293kp"
+	},
+	"ufc": "https://www.ufc.com/athlete"
 }
