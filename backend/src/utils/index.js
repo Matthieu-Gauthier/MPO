@@ -1,5 +1,7 @@
-const axiosModule = require('./services');
+const services = require('./services');
+const dates = require('./dates');
 
 module.exports = {
-	...axiosModule,
+	...services,
+	...dates,
 };

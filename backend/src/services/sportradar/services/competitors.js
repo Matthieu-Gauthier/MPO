@@ -3,37 +3,41 @@ const request = require('request-promise');
 const cheerio = require('cheerio');
 const validUrl = require('valid-url');
 
-const { callAxios, findAndUpdateOrCreate, sleep } = require('../../../utils');
+const { callAxios, findAndUpdateOrCreate, sleep, daysDiff } = require('../../../utils');
 const { fightConstructor } = require('./fights');
 const { statisticsConstructor } = require('./statistics');
 
 const competitorConstructor = async (app, id) => {
 	const map = mapping(app);
-	await sleep(2000);
-	const data = await callAxios(app, map.getCompetitorInfo(id));
-	const competitor = {
-		id: data.competitor?.id,
-		name: data.competitor?.name,
-		abbreviation: data.competitor?.abbreviation,
-		birth_city: data.info?.birth_city,
-		birth_state: data.info?.birth_state,
-		birth_country: data.info?.birth_country,
-		birth_country_code: data.info?.birth_country_code,
-		birth_date: data.info?.birth_date,
-		fighting_out_of_city: data.info?.fighting_out_of_city,
-		fighting_out_of_country: data.info?.fighting_out_of_country,
-		fighting_out_of_country_code: data.info?.fighting_out_of_country_code,
-		fighting_out_of_state: data.info?.fighting_out_of_state,
-		reach: data.info?.reach,
-		height: data.info?.height,
-		weight: data.info?.weight,
-		record: data['record'],
-	};
-
-	return await findAndUpdateOrCreate(app.service('competitors'), competitor);
+	const c = await app.service('competitors').get(id);
+	if (!c || (!c.reach || !c.height || !c.weight) || daysDiff(c.updatedAt) > 30) {
+		await sleep(2000);
+		const data = await callAxios(app, map.getCompetitorInfo(id));
+		const competitor = {
+			id: data.competitor?.id,
+			name: data.competitor?.name,
+			abbreviation: data.competitor?.abbreviation,
+			birth_city: data.info?.birth_city,
+			birth_state: data.info?.birth_state,
+			birth_country: data.info?.birth_country,
+			birth_country_code: data.info?.birth_country_code,
+			birth_date: data.info?.birth_date,
+			fighting_out_of_city: data.info?.fighting_out_of_city,
+			fighting_out_of_country: data.info?.fighting_out_of_country,
+			fighting_out_of_country_code: data.info?.fighting_out_of_country_code,
+			fighting_out_of_state: data.info?.fighting_out_of_state,
+			reach: data.info?.reach,
+			height: data.info?.height,
+			weight: data.info?.weight,
+			record: data['record'],
+		};
+		return await findAndUpdateOrCreate(app.service('competitors'), competitor);
+	}
+	return c;
 };
 
 const getCompetitorPictures = async (app, competitor) => {
+	await sleep(1000);
 	const pictures = await fetchPictures(app, competitor.name);
 	return await app.service('competitors').patch(competitor.id, pictures);
 };
@@ -81,8 +85,7 @@ const getCompetitorSummaries = async (app, competitorId) => {
 	const competitor = await competitorConstructor(app, competitorId);
 
 	// Get competitor pictures
-	if (competitor) {
-		await sleep(1000);
+	if (competitor && (!competitor.avatar || !competitor.banner)) {
 		await getCompetitorPictures(app, competitor);
 	}
 

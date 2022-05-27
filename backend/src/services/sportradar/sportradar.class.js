@@ -2,6 +2,7 @@
 const { getNextFight, getFightSummaries } = require('./services/fights');
 const { getFutureEvents } = require('./services/seasons');
 const { updateCompetitors } = require('./services/competitors');
+const { daysDiff } = require('../../utils');
 
 
 exports.Sportradar = class Sportradar {
@@ -40,6 +41,12 @@ exports.Sportradar = class Sportradar {
 			}
 
 			return 'Params "eventId" not found';
+			break;
+
+		case 'test':
+			const a = new Date(2020, 11, 24, 10, 33, 30);
+			const b = new Date(2021, 11, 24, 10, 33, 30);
+			return daysDiff(a, b);
 			break;
 		default:
 			return 'Unsupported sportradar getter';
