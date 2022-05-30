@@ -7,11 +7,11 @@ const venues = require('./venues/venues.service.js');
 const sportradar = require('./sportradar/sportradar.service.js');
 
 module.exports = function (app) {
-  app.configure(users);
-  app.configure(events);
-  app.configure(fights);
-  app.configure(statistics);
-  app.configure(competitors);
-  app.configure(venues);
-  app.configure(sportradar);
+   app.configure(users);
+   app.configure(events);
+   app.configure(fights);
+   app.configure(statistics);
+   app.configure(competitors);
+   app.configure(venues);
+   app.configure(sportradar);
 };
