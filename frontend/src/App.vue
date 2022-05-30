@@ -9,7 +9,7 @@
          </v-btn>
          <v-btn color="primary"
                 to="/about">
-            About
+            {{ $t('about') }}
          </v-btn>
 
          <v-btn color="secondary">
@@ -34,3 +34,6 @@
       </v-main>
    </v-app>
 </template>
+
+<script setup>
+</script>
