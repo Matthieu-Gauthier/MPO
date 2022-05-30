@@ -1,3 +1,11 @@
-// Place SASS variable overrides here
-//$font-size-root: 28px;
-//$btn-font-weight: 100;
+// @use must always stay first
+@use 'vuetify/styles' with (
+  // Place SASS variable overrides here
+
+  // Don't remove this variables
+  $color-pack: false,
+  $utilities: false,
+);
+
+// For import google font families
+//@import url('https://fonts.googleapis.com/css? family=Oxygen:300,400,700&display=swap');

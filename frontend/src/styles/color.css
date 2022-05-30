@@ -21,98 +21,11 @@
 
 :root {
     /* Brand */
-    --color-brand-hex:#0073CF;
-
-    /* Neutral */
-    --color-neutral-primary-hsl            :205, 15%, 25%;
-    --color-neutral-primary                :hsl(var(--color-neutral-primary-hsl));
-    --color-neutral-primary-hex            :#37424A;
-
-    --color-neutral-secondary-hsl          :205, 6%, 60%;
-    --color-neutral-secondary              :hsl(var(--color-neutral-secondary-hsl));
-
-    --color-neutral-tertiary-hsl           :200, 4%, 83%;
-    --color-neutral-tertiary               :hsl(var(--color-neutral-tertiary-hsl));
-    --color-neutral-tertiary-hex            :#D3D5D6;
-
-    --color-neutral-primary-reversed-hsl   :0, 0%, 98%;
-    --color-neutral-primary-reversed       :hsl(var(--color-neutral-primary-reversed-hsl));
-
-    /* Background Neutral */
-    --color-bg-neutral-ground-hsl          :0deg, 0%, 100%;
-    --color-bg-neutral-ground              :hsl( var(--color-bg-neutral-ground-hsl) );
-
-    --color-bg-neutral-underground-hsl     :0, 0%, 94%;
-    --color-bg-neutral-underground         :hsl( var(--color-bg-neutral-underground-hsl) );
-
-    --color-bg-neutral-ground-reversed-hsl :200, 19%, 18%;
-    --color-bg-neutral-ground-reversed     :hsl( var(--color-bg-neutral-ground-reversed-hsl) );
-
-    /* Background Big element highlight */
-    --color-bg-big-element-highlight-brand-soft-hsl    :207, 94%, 94%;
-    --color-bg-big-element-highlight-brand-soft        :hsl( var(--color-bg-big-element-highlight-brand-soft-hsl) );
-
-    --color-bg-big-element-highlight-positive-soft-hsl :99, 91%, 96%;
-    --color-bg-big-element-highlight-positive-soft     :hsl( var(--color-bg-big-element-highlight-positive-soft-hsl) );
-
-    --color-bg-big-element-highlight-warning-soft-hsl  :53, 90%, 96%;
-    --color-bg-big-element-highlight-warning-soft      :hsl( var(--color-bg-big-element-highlight-warning-soft-hsl) );
-
-    --color-bg-big-element-highlight-negative-soft-hsl :5, 87%, 97%;
-    --color-bg-big-element-highlight-negative-soft     :hsl( var(--color-bg-big-element-highlight-negative-soft-hsl) );
-
-    /* Background Small element highlight */
-    --color-bg-small-element-highlight-brand-strong-hsl    :211, 97%, 91%;
-    --color-bg-small-element-highlight-brand-strong        :hsl( var(--color-bg-small-element-highlight-brand-strong-hsl) );
-
-    --color-bg-small-element-highlight-positive-strong-hsl :130, 55%, 89%;
-    --color-bg-small-element-highlight-positive-strong     :hsl( var(--color-bg-small-element-highlight-positive-strong-hsl) );
-
-    --color-bg-small-element-highlight-warning-strong-hsl  :45, 100%, 88%;
-    --color-bg-small-element-highlight-warning-strong      :hsl( var(--color-bg-small-element-highlight-warning-strong-hsl) );
-
-    --color-bg-small-element-highlight-negative-strong-hsl :5, 97%, 93%;
-    --color-bg-small-element-highlight-negative-strong     :hsl( var(--color-bg-small-element-highlight-negative-strong-hsl) );
-
-    /* Action */
-    --color-action-brand-hsl               :207, 100%, 41%;
-    --color-action-brand                   :hsl( var(--color-action-brand-hsl) );
-
-    --color-action-positive-hsl            :171, 90%, 35%;
-    --color-action-positive                :hsl( var(--color-action-positive-hsl) );
-
-    --color-action-warning-hsl             :46, 93%, 55%;
-    --color-action-warning                 :hsl( var(--color-action-warning-hsl) );
-    --color-action-warning-hex             :#F7C422;
-
-    --color-action-negative-hsl             :360, 70%, 51%;
-    --color-action-negative                 :hsl( var(--color-action-negative-hsl) );
-
-    /* Action darker */
-    --color-action-brand-darker-hsl       :207, 100%, 29%;
-    --color-action-brand-darker           :hsl(var(--color-action-brand-darker-hsl));
-    --color-action-brand-darker-hex       :#005294;
-
-    --color-action-positive-darker-hsl    :176, 100%, 20%;
-    --color-action-positive-darker        :hsl(var(--color-action-positive-darker-hsl));
-    --color-action-positive-darker-hex    :#00645E;
-
-    --color-action-warning-darker-hsl     :32, 95%, 31%;
-    --color-action-warning-darker         :hsl(var(--color-action-warning-darker-hsl));
-    --color-action-warning-darker-hex     :#9A5504;
-
-    --color-action-negative-darker-hsl    :0, 88%, 36%;
-    --color-action-negative-darker        :hsl(var(--color-action-negative-darker-hsl));
-    --color-action-negative-darker-hex    :#AB0B0B;
-
-    --color-bg-action-positive-hsl          :176, 100%, 20%;
-    --color-bg-action-positive              :hsl( var(--color-bg-action-positive-hsl) );
-
-    --color-bg-action-warning-hsl          :33, 100%, 34%;
-    --color-bg-action-warning              :hsl( var(--color-bg-action-warning-hsl) );
-
-    --color-bg-action-negative-hsl          :0, 88%, 36%;
-    --color-bg-action-negative              :hsl( var(--color-bg-action-negative-hsl) );
-
-    --placeholder-color                    :var(--color-neutral-secondary);
+    --primary-color:#D20A0A;
+    --secondary-color:#000;
+    --accent-color:#16559F;
+    --error-color:#AB0B0B;
+    --info-color:#005294;
+    --success-color:#00645E;
+    --warning-color:#F7C422;
 }
