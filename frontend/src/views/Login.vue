@@ -4,7 +4,8 @@
              align="center"
              justify="center">
          <v-col cols="4">
-            <v-card class="login-card">
+            <v-card v-if="!auth.isAuthenticated"
+                    class="login-card">
                <v-card-title>
                   <div class="title">
                      <span>{{ $t("login.welcome") }}</span>
@@ -33,6 +34,14 @@
                   </v-btn>
                </v-card-actions>
             </v-card>
+            <v-card v-else>
+               <v-card-actions class="justify-center">
+                  <v-btn color="primary"
+                         @click="logout">
+                     Logout
+                  </v-btn>
+               </v-card-actions>
+            </v-card>
          </v-col>
       </v-row>
       <div> {{ isAuth }}</div>
@@ -55,13 +64,15 @@ const user = ref({
    password: 'matthieu'
 });
 
-const isAuth = ref('');
 const userLogged = computed(() => auth.user);
 const loginSubmit = async () => {
-   isAuth.value = await auth.authenticate({
+   await auth.authenticate({
       strategy: 'local',
       email: user.value.email,
       password: user.value.password,
    });
+};
+const logout = async () => {
+   await auth.logout();
 };
 </script>

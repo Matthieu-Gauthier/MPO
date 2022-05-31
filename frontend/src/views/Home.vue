@@ -9,10 +9,10 @@
 import EventsTest from '@/components/EventsTest.vue';
 
 export default {
-  name: 'HomeView',
+   name: 'HomeView',
 
-  components: {
-    EventsTest
-  }
+   components: {
+      EventsTest
+   }
 };
 </script>

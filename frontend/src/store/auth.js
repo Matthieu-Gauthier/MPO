@@ -54,6 +54,19 @@ export const useAuth = defineAuthStore({
             this.error = error;
             return this.handleError(error);
          }
+      },
+      async logout() {
+         try {
+            const response = await api.logout();
+            this.accessToken = null;
+            this.user = null;
+            this.payload = null;
+            this.isAuthenticated = false;
+            return response;
+         } catch (error) {
+            this.error = error;
+            return this.handleError(error);
+         }
       }
    },
 });
