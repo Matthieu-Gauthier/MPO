@@ -36,14 +36,15 @@
          </v-col>
       </v-row>
       <div> {{ isAuth }}</div>
-      <div> {{ user }}</div>
-
-      <glo-snack ref="snack" />
+      <div class="text-light-blue">
+         User: {{ user }}
+      </div>
+      <div> {{ userLogged }}</div>
    </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 
 import { useAuth } from '@/store/auth';
 
@@ -53,7 +54,9 @@ const user = ref({
    email: 'xgotgot@gmail.com',
    password: 'matthieu'
 });
+
 const isAuth = ref('');
+const userLogged = computed(() => auth.user);
 const loginSubmit = async () => {
    isAuth.value = await auth.authenticate({
       strategy: 'local',

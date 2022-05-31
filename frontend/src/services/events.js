@@ -1,4 +1,4 @@
-import { defineStore, BaseModel } from '../store/store.pinia';
+import { defineStore, BaseModel } from '@/store/store.pinia';
 import { api } from '@/feathers-client';
 
 class Event extends BaseModel {
@@ -6,7 +6,7 @@ class Event extends BaseModel {
       super(data, options);
    }
 
-   static instanceDefaults(data, store) {
+   static instanceDefaults() {
       return {
          text: '',
          name: '',
@@ -15,6 +15,7 @@ class Event extends BaseModel {
 }
 const servicePath = 'events';
 export const useEvents = defineStore({
+   id: 'events',
    servicePath,
    Model: Event,
 });

@@ -1,4 +1,4 @@
-import { defineStore, BaseModel } from '../store/store.pinia';
+import { defineStore, BaseModel } from '@/store/store.pinia';
 
 import { api } from '@/feathers-client';
 
@@ -10,12 +10,12 @@ class User extends BaseModel {
    static instanceDefaults() {
       return {
          email: '',
-         password: '',
       };
    }
 }
 const servicePath = 'users';
 export const useUsers = defineStore({
+   id: 'users',
    servicePath,
    Model: User,
 });

@@ -12,8 +12,9 @@
             {{ $t('about') }}
          </v-btn>
 
-         <v-btn color="secondary">
-            secondary
+         <v-btn color="secondary"
+                to="/login">
+            Login
          </v-btn>
          <v-btn color="accent">
             accent
@@ -36,4 +37,5 @@
 </template>
 
 <script setup>
+
 </script>
