@@ -1,3 +1,11 @@
 {
-	"about": "About"
+	"about": "About",
+	"login": {
+		"welcome": "Welcome",
+		"login": "Login"
+	},
+	"signup": {
+		"username": "Username",
+		"password": "Password"
+	}
 }

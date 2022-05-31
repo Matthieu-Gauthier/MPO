@@ -9,7 +9,6 @@ import { createVuetify } from 'vuetify';
 import customTheme from '@/styles/vuetify/theme';
 
 // Vuetify
-
 export default createVuetify({
    theme: {
       defaultTheme: 'customTheme',
