@@ -13,7 +13,6 @@ module.exports = {
       'plugin:vue/vue3-essential',
       'plugin:vue/essential',
       'plugin:vue/vue3-recommended',
-      'plugin:import/recommended',
    ],
    ignorePatterns: [],
    rules: {
@@ -44,13 +43,6 @@ module.exports = {
       'vue/v-slot-style': 'off',
       // vuejs-accessibility
       'vuejs-accessibility/no-onchange': 'off',
-
-      // eslint-plugin-import
-      'import/no-self-import': 'error',
-      'import/no-deprecated': 'warn',
-      'import/extensions': ['warn', 'never'],
-      'import/order': ['error', { 'newlines-between': 'always' }],
-      'import/newline-after-import': 'error',
 
       'indent': [ 'error', 3 ],
       'quotes': ['error', 'single', { 'avoidEscape': true }],
