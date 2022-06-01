@@ -1,41 +1,40 @@
 <template>
-   <v-app>
-      <v-app-bar color="teal-darken-4"
-                 image="https://picsum.photos/1920/1080?random" />
-      <v-main class="app">
-         <v-btn color="warning"
-                to="/">
-            Home
-         </v-btn>
-         <v-btn color="primary"
-                to="/about">
-            {{ $t('about') }}
-         </v-btn>
-
-         <v-btn color="secondary"
-                to="/login">
-            Login
-         </v-btn>
-         <v-btn color="accent">
-            accent
-         </v-btn>
-         <v-btn color="error">
-            error
-         </v-btn>
-         <v-btn color="warning">
-            warning
-         </v-btn>
-         <v-btn color="info">
-            info
-         </v-btn>
-         <v-btn color="success">
-            success
-         </v-btn>
+   <div id="app">
+      <Particles id="tsparticles"
+                 :particles-init="particlesInit"
+                 :options="particulesConfig" />
+      <app-bar />
+      <div id="main">
          <router-view />
-      </v-main>
-   </v-app>
+      </div>
+   </div>
 </template>
 
 <script setup>
+import AppBar from '@/components/AppBar.vue';
+import particulesConfig from '@/assets/particles.js';
+import { loadFull } from 'tsparticles';
 
+const particlesInit = async (engine) => {
+   await loadFull(engine);
+};
 </script>
+
+<style scoped>
+#tsparticles {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: #000000;
+   z-index: -10;
+}
+#main {
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 8em;
+   bottom: 5em;
+}
+</style>

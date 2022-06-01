@@ -21,11 +21,21 @@
 
 :root {
     /* Brand */
-    --primary-color:#D20A0A;
+    --primary-color:#6C0808;
+    --primary-light-color:#a03c30;
+    --primary-dark-color:#3f0000;
     --secondary-color:#000;
-    --accent-color:#16559F;
+
     --error-color:#AB0B0B;
+    --error-light-color:#e44b35;
+    --error--dark-color:#740000;
     --info-color:#005294;
+    --info-light-color:#4c7ec5;
+    --info-dark-color:#002a66;
     --success-color:#00645E;
+    --success-light-color:#42928b;
+    --success-dark-color:#003934;
     --warning-color:#F7C422;
+    --warning-light-color:#fff65c;
+    --warning-dark-color:#c09400;
 }
