@@ -25,6 +25,13 @@ const routes = [
       component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
       meta: { requiresAuth: true },
    },
+   {
+      path: '/fight/:id',
+      name: 'fight',
+      component: () => import(/* webpackChunkName: "fight" */ '../views/Fight.vue'),
+      props: true,
+      meta: { requiresAuth: true },
+   },
 ];
 
 const router = createRouter({

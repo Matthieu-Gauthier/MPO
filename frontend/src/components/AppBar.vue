@@ -29,5 +29,9 @@ const routes = [{
 {
    name:'about',
    path:'/about',
+},
+{
+   path: '/fight/sr:sport_event:33785907',
+   name: 'fight'
 }];
 </script>
