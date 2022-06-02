@@ -1,7 +1,7 @@
 import { defineStore, BaseModel } from '@/store/store.pinia';
 import { api } from '@/feathers-client';
 
-class Event extends BaseModel {
+class Statistic extends BaseModel {
    constructor(data, options = {}) {
       super(data, options);
    }
@@ -9,19 +9,18 @@ class Event extends BaseModel {
    static instanceDefaults() {
       return {
          id: null,
-         name: '',
-         start_date: null,
-         end_date: null,
-         year: NaN,
-         competition_id: null,
+         fight_id: null,
+         competitor_id: null,
+         global: null,
+         rounds: [],
       };
    }
 }
-const servicePath = 'events';
-export const useEvents = defineStore({
-   id: 'events',
+const servicePath = 'statistics';
+export const useStatistics = defineStore({
+   id: 'statistics',
    servicePath,
-   Model: Event,
+   Model: Statistic,
 });
 
 api.service(servicePath).hooks({});
