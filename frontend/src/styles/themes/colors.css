@@ -26,7 +26,6 @@
     --primary-light-color:#a03c30;
     --primary-dark-color:#3f0000;
     --secondary-color:#000;
-
     --error-color:#AB0B0B;
     --error-light-color:#e44b35;
     --error-dark-color:#740000;
@@ -40,4 +39,9 @@
     --warning-light-color:#fff65c;
     --warning-dark-color:#c09400;
     --ground-color: #FAFAFA;
+
+    --home-color: #004daa;
+    --away-color: #d20a0a;
+    --away-light-color: rgb(246, 59, 59);
+    --home-light-color: rgb(115, 180, 236);
 }
