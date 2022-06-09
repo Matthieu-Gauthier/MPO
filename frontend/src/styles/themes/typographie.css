@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+:root {
+   --font-family-primary         :  'Fira Sans', sans-serif;
+
+   --font-weight-regular         : 200;
+   --font-weight-semibold        : 600;
+   --font-weight-demibold        : 700;
+
+   --font-size-default           : 14px;
+   --font-size-headings-large    : 2.29rem; /* 32px */
+   --font-size-headings-medium   : 1.715rem; /* 24px */
+   --font-size-headings-small    : 1.143rem; /* 16px */
+   --font-size-headings-xsmall   : 0.8575rem; /* 12px */
+   --font-size-body-large        : 1.143rem; /* 16px */
+   --font-size-body-medium       : 1rem; /* 14px */
+   --font-size-body-small        : 0.8575rem; /* 12px */
+   --font-size-body-caps-small   : 0.7145rem; /* 10px */
+
+   --line-height-default           : 20px;
+   --line-height-headings-large    : 40px;
+   --line-height-headings-medium   : 32px;
+   --line-height-headings-small    : 24px;
+   --line-height-headings-xsmall   : 16px;
+   --line-height-body-large        : 24px;
+   --line-height-body-medium       : 20px;
+   --line-height-body-small        : 16px;
+
+}

@@ -1,4 +1,4 @@
-import '../color.css';
+import '../themes/colors.css';
 
 const theme = {
    dark: false,
@@ -13,6 +13,6 @@ const theme = {
       success: getComputedStyle(document.body).getPropertyValue('--success-color'),
       warning: getComputedStyle(document.body).getPropertyValue('--warning-color')
    }
-}
+};
 
 export default theme;

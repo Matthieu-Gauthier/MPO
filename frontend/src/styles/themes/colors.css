@@ -28,7 +28,7 @@
 
     --error-color:#AB0B0B;
     --error-light-color:#e44b35;
-    --error--dark-color:#740000;
+    --error-dark-color:#740000;
     --info-color:#005294;
     --info-light-color:#4c7ec5;
     --info-dark-color:#002a66;
@@ -38,4 +38,5 @@
     --warning-color:#F7C422;
     --warning-light-color:#fff65c;
     --warning-dark-color:#c09400;
+    --ground-color: #FAFAFA;
 }

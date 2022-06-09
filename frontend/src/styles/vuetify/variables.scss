@@ -1,7 +1,85 @@
+@forward 'vuetify/lib/styles/main.sass' with (
+   $body-font-family: var(--font-family-primary),
+   $line-height-root: var(--line-height-default),
+   $font-size-root: var(--font-size-default),
+   $typography: (
+      'h1': (
+         'size': var(--font-size-headings-large),
+         'weight': var(--font-weight-regular),
+         'line-height': var(--line-height-headings-large)
+      ),
+      'h2': (
+         'size': var(--font-size-headings-medium),
+         'weight': var(--font-weight-semibold),
+         'line-height': var(--line-height-headings-medium)
+      ),
+      'h3': (
+         'size': var(--font-size-headings-small),
+         'weight': var(--font-weight-semibold),
+         'line-height': var(--line-height-headings-small)
+      ),
+      'body-1': (
+         'size': var(--font-size-body-medium),
+         'weight': var(--font-weight-regular),
+         'line-height': var(--line-height-body-medium)
+      ),
+      'body-2': (
+         'size': var(--font-size-body-medium),
+         'weight': var(--font-weight-semibold),
+         'line-height': var(--line-height-body-medium)
+      ),
+      'button': (
+         'size': var(--font-size-headings-xsmall),
+         'weight': var(--font-weight-semibold),
+         'line-height': var(--line-height-headings-xsmall)
+      )
+   ),
+);
 
-@forward 'vuetify/styles/main.sass';
+@forward "vuetify/lib/components/VBadge/VBadge.sass";
+@forward 'vuetify/lib/components/VGrid/VGrid.sass';
+@forward 'vuetify/lib/components/VMain/VMain.sass';
+@forward 'vuetify/lib/components/VApp/VApp.sass';
+@forward 'vuetify/lib/components/VSelect/VSelect.sass';
+@forward 'vuetify/lib/components/VTooltip/VTooltip.sass';
+@forward 'vuetify/lib/components/VCard/VCard.sass';
+@forward 'vuetify/lib/components/VBtn/VBtn.sass';
+@forward 'vuetify/lib/components/VSwitch/VSwitch.sass';
+@forward 'vuetify/lib/components/VCheckbox/VCheckbox.sass';
+@forward 'vuetify/lib/components/VChip/VChip.sass';
+@forward 'vuetify/lib/components/VIcon/VIcon.sass';
+@forward 'vuetify/lib/components/VRadioGroup/VRadioGroup.sass';
+@forward 'vuetify/lib/components/VSlider/VSlider.sass';
+@forward 'vuetify/lib/components/VAvatar/VAvatar.sass';
+@forward 'vuetify/lib/components/VDivider/VDivider.sass';
+@forward 'vuetify/lib/components/VOverlay/VOverlay.sass';
+@forward 'vuetify/lib/components/VRating/VRating.sass';
+@forward 'vuetify/lib/components/VTextField/VTextField.sass';
+@forward 'vuetify/lib/components/VTabs/VTab.sass';
+@forward 'vuetify/lib/components/VTextarea/VTextarea.sass';
+@forward 'vuetify/lib/components/VTabs/VTabs.sass';
+@forward "vuetify/lib/components/VSnackbar/VSnackbar.sass";
+@forward 'vuetify/lib/components/VSelectionControl/VSelectionControl.sass';
+@forward 'vuetify/lib/components/VSlider/VSliderThumb.sass';
+@forward 'vuetify/lib/components/VSlider/VSliderTrack.sass';
+@forward 'vuetify/lib/components/VBtnToggle/VBtnToggle.sass';
+@forward 'vuetify/lib/components/VInput/VInput.sass';
+@forward 'vuetify/lib/components/VChipGroup/VChipGroup.sass';
+@forward 'vuetify/lib/components/VMenu/VMenu.sass';
+@forward 'vuetify/lib/components/VList/VList.sass';
+@forward 'vuetify/lib/components/VList/VListItem.sass';
+@forward 'vuetify/lib/components/VField/VField.sass';
+@forward 'vuetify/lib/directives/ripple/VRipple.sass';
+@forward 'vuetify/lib/components/VProgressCircular/VProgressCircular.sass';
+@forward 'vuetify/lib/components/VSelectionControlGroup/VSelectionControlGroup.sass';
+@forward 'vuetify/lib/components/VImg/VImg.sass';
+@forward 'vuetify/lib/components/VLabel/VLabel.sass';
+@forward 'vuetify/lib/components/VCounter/VCounter.sass';
+@forward 'vuetify/lib/components/VSlideGroup/VSlideGroup.sass';
+@forward 'vuetify/lib/components/VProgressLinear/VProgressLinear.sass';
+@forward 'vuetify/lib/components/VBtnGroup/VBtnGroup.sass';
+@forward 'vuetify/lib/components/VMessages/VMessages.sass';
+@forward 'vuetify/lib/components/VResponsive/VResponsive.sass';
 @use 'vuetify/styles';
-
-
 // For import google font families
 @import url('https://fonts.googleapis.com/css? family=Oxygen:300,400,700&display=swap');

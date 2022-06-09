@@ -1,7 +1,6 @@
 <template>
    <v-toolbar absolute
-              color="var(--primary-dark-color)"
-              class="rounded-pill text-white"
+              class="rounded-pill color-neutral-ground bg-color-primary-dark"
               style="top: 3em;left: 50%; transform: translateX(-50%)">
       <v-btn v-for="link in routes"
              :key="link.name" :to="link.path"
@@ -31,7 +30,11 @@ const routes = [{
    path:'/about',
 },
 {
-   path: '/fight/sr:sport_event:33785907',
-   name: 'fight'
+   path: '/events/',
+   name: 'events'
+},
+{
+   path: '/events/',
+   name: 'MATCHUP STATS'
 }];
 </script>

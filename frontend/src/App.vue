@@ -1,8 +1,5 @@
 <template>
    <div id="app">
-      <Particles id="tsparticles"
-                 :particles-init="particlesInit"
-                 :options="particulesConfig" />
       <app-bar />
       <div id="main">
          <router-view />
@@ -12,12 +9,7 @@
 
 <script setup>
 import AppBar from '@/components/AppBar.vue';
-import particulesConfig from '@/assets/particles.js';
-import { loadFull } from 'tsparticles';
-
-const particlesInit = async (engine) => {
-   await loadFull(engine);
-};
+import './styles/index.css';
 </script>
 
 <style scoped>

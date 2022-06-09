@@ -10,6 +10,7 @@
                  style="max-width: 318px">
             <v-list-item v-for="(event, i) in items"
                          :key="i" v-ripple
+                         :to="/fights/ + event.id"
                          clickable>
                <v-list-item-subtitle>
                   <span>{{ event.name }}</span>
@@ -23,7 +24,6 @@
 <script setup>
 import { useFind } from 'feathers-pinia';
 import { useEvents } from '@/services/events';
-
 const events = useEvents();
 const { items, isPending } =  useFind({ model: events.Model, params: { query: {} } });
 </script>

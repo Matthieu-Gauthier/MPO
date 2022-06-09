@@ -1,0 +1,43 @@
+.color-neutral-ground.color-neutral-ground {
+    color: var(--ground-color );
+}
+
+.color-primary-light {
+    color: var(--primary-light-color );
+}
+
+.color-primary-dark {
+    color: var(--primary-dark-color );
+}
+
+.color-error-light {
+    color: var(--error-light-color );
+}
+
+.color-error-dark {
+    color: var(--error-dark-color );
+}
+
+.color-info-light {
+    color: var(--info-light-color );
+}
+
+.color-info-dark {
+    color: var(--info-dark-color );
+}
+
+.color-success-light {
+    color: var(--success-light-color );
+}
+
+.color-success-dark {
+    color: var(--success-dark-color );
+}
+
+.color-warning-light {
+    color: var(--warning-light-color );
+}
+
+.color-warning-dark {
+    color: var(--warning-dark-color );
+}

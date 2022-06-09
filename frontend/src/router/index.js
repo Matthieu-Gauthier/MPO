@@ -32,6 +32,26 @@ const routes = [
       props: true,
       meta: { requiresAuth: true },
    },
+   {
+      path: '/fights/:id',
+      name: 'fights',
+      component: () => import(/* webpackChunkName: "fight" */ '../views/Fights.vue'),
+      props: true,
+      meta: { requiresAuth: true },
+   },
+   {
+      path: '/event/:id',
+      name: 'event',
+      component: () => import(/* webpackChunkName: "fight" */ '../views/Event.vue'),
+      props: true,
+      meta: { requiresAuth: true },
+   },
+   {
+      path: '/events/',
+      name: 'events',
+      component: () => import(/* webpackChunkName: "fight" */ '../views/Events.vue'),
+      meta: { requiresAuth: true },
+   },
 ];
 
 const router = createRouter({

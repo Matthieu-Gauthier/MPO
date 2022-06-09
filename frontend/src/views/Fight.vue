@@ -1,9 +1,16 @@
 <template>
-   <div>
-      <h1>{{ id }}</h1>
-      <competitor v-if="item"
-                  :id="item.away_competitor_id" />
-   </div>
+   <v-row>
+      <v-col>
+         {{ item.home_competitor_id }}
+         <competitor v-if="item"
+                     :id="item.home_competitor_id" />
+      </v-col>
+      <v-col>
+         {{ item.away_competitor_id }}
+         <competitor v-if="item"
+                     :id="item.away_competitor_id" />
+      </v-col>
+   </v-row>
 </template>
 
 <script setup>

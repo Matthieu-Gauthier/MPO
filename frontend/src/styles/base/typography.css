@@ -1,0 +1,45 @@
+
+
+.text-body-3.text-body-3 {
+   font-size: var(--font-size-body-large);
+   font-weight: var(--font-weight-regular);
+   line-height: var(--line-height-body-large);
+   font-family: var(--font-family-primary);
+}
+
+.text-body-4.text-body-4 {
+   font-size: var(--font-size-body-large);
+   font-weight: var(--font-weight-demibold);
+   line-height: var(--line-height-body-large);
+   font-family: var(--font-family-primary);
+}
+
+.text-body-5 {
+   font-size: var(--font-size-body-small);
+   font-weight: var(--font-weight-regular);
+   line-height: var(--line-height-body-small);
+   font-family: var(--font-family-primary);
+}
+
+.text-body-6 {
+   font-size: var(--font-size-body-caps-small);
+   font-weight: var(--font-weight-semibold);
+   line-height: var(--line-height-body-small);
+   font-family: var(--font-family-primary);
+   text-transform: uppercase;
+}
+
+.text-body-7 {
+   font-size: var(--font-size-body-small);
+   font-weight: var(--font-weight-demibold);
+   line-height: var(--line-height-body-small);
+   font-family: var(--font-family-primary);
+}
+
+/* Cette classe est utile pour les label outlined car un scaling de 0.75 est appliqué sur le lineHeight sur les fields outlined*/
+.text-body-label-outlined {
+   font-size: var(--font-size-body-large);
+   font-weight: var(--font-weight-regular);
+   line-height: 21.33px;
+   font-family: var(--font-family-primary);
+}
