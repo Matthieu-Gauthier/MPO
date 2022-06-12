@@ -1,10 +1,8 @@
 import '../themes/colors.css';
 
 const theme = {
-   dark: false,
+   dark: true,
    colors: {
-      background: '#FFFFFF',
-      surface: '#FFFFFF',
       primary: getComputedStyle(document.body).getPropertyValue('--primary-color'),
       secondary: getComputedStyle(document.body).getPropertyValue('--secondary-color'),
       accent: getComputedStyle(document.body).getPropertyValue('--accent-color'),

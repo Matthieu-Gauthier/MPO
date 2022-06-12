@@ -1,10 +1,10 @@
 <template>
-   <div id="app">
+   <v-app>
       <app-bar />
-      <div id="main">
+      <v-main id="main">
          <router-view />
-      </div>
-   </div>
+      </v-main>
+   </v-app>
 </template>
 
 <script setup>
@@ -13,15 +13,6 @@ import './styles/index.css';
 </script>
 
 <style scoped>
-#tsparticles {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background: #000000;
-   z-index: -10;
-}
 #main {
    position: absolute;
    left: 0;

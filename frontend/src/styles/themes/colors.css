@@ -21,11 +21,11 @@
 
 :root {
     /* Brand */
-    --primary-color:#6C0808;
-    --primary-color:#202324;
-    --primary-light-color:#a03c30;
-    --primary-dark-color:#3f0000;
-    --secondary-color:#000;
+    --primary-color: #FAFAFA;
+    --secondary-color:#6C0808;
+    --secondary-light-color:#a03c30;
+    --secondary-dark-color:#3f0000;
+    --tertiary-color:#000;
     --error-color:#AB0B0B;
     --error-light-color:#e44b35;
     --error-dark-color:#740000;
@@ -38,7 +38,8 @@
     --warning-color:#F7C422;
     --warning-light-color:#fff65c;
     --warning-dark-color:#c09400;
-    --ground-color: #FAFAFA;
+
+    --background-color:#202324;
 
     --home-color: #004daa;
     --away-color: #d20a0a;

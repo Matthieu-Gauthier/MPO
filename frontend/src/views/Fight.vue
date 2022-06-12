@@ -1,22 +1,17 @@
 <template>
    <v-row>
       <v-col>
-         {{ item.home_competitor_id }}
-         <competitor v-if="item"
-                     :id="item.home_competitor_id" />
-      </v-col>
-      <v-col>
-         {{ item.away_competitor_id }}
-         <competitor v-if="item"
-                     :id="item.away_competitor_id" />
+         <fight-competitors v-if="item"
+                            :home-competitor-id="item.home_competitor_id"
+                            :away-competitor-id="item.away_competitor_id" />
       </v-col>
    </v-row>
 </template>
 
 <script setup>
-import Competitor from '@/components/Competitor.vue';
 import { useGet } from 'feathers-pinia';
 import { useFights } from '@/services/fights';
+import FightCompetitors from '@/components/fightCompetitors.vue';
 const props = defineProps({
    id: { type: String }
 });

@@ -1,6 +1,6 @@
 <template>
    <v-toolbar absolute
-              class="rounded-pill color-neutral-ground bg-color-primary-dark"
+              class="rounded-pill"
               style="top: 3em;left: 50%; transform: translateX(-50%)">
       <v-btn v-for="link in routes"
              :key="link.name" :to="link.path"

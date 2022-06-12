@@ -1,13 +1,9 @@
-.bg-color-neutral-ground {
-    background-color: var(--ground-color );
+.bg-color-secondary-light {
+    background-color: var(--secondary-light-color );
 }
 
-.bg-color-primary-light {
-    background-color: var(--primary-light-color );
-}
-
-.bg-color-primary-dark.bg-color-primary-dark {
-    background-color: var(--primary-dark-color );
+.bg-color-secondary-dark.bg-color-secondary-dark {
+    background-color: var(--secondary-dark-color );
 }
 
 .bg-color-error-light {
@@ -40,4 +36,8 @@
 
 .bg-color-warning-dark {
     background-color: var(--warning-dark-color );
+}
+
+.bg-color.bg-color.bg-color {
+    background-color: var(--background-color );
 }

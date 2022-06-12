@@ -1,13 +1,9 @@
-.color-neutral-ground.color-neutral-ground {
-    color: var(--ground-color );
+.color-secondary-light {
+    color: var(--secondary-light-color );
 }
 
-.color-primary-light {
-    color: var(--primary-light-color );
-}
-
-.color-primary-dark {
-    color: var(--primary-dark-color );
+.color-secondary-dark {
+    color: var(--secondary-dark-color );
 }
 
 .color-error-light {
@@ -40,4 +36,12 @@
 
 .color-warning-dark {
     color: var(--warning-dark-color );
+}
+
+.home-color {
+    color: var(--home-color );
+}
+
+.away-color {
+    color: var(--away-color );
 }
