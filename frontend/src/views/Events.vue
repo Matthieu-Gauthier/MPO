@@ -13,7 +13,8 @@
                          :to="/fights/ + event.id"
                          clickable>
                <v-list-item-subtitle>
-                  <span>{{ event.name }}</span>
+                  <span>{{ event.name }}</span> //
+                  <span>{{ event.start_date }}</span>
                </v-list-item-subtitle>
             </v-list-item>
          </v-list>
@@ -25,5 +26,5 @@
 import { useFind } from 'feathers-pinia';
 import { useEvents } from '@/services/events';
 const events = useEvents();
-const { items, isPending } =  useFind({ model: events.Model, params: { query: {} } });
+const { items, isPending } =  useFind({ model: events.Model, params: { query: { $sort: { start_date: -1 }, name: { $regex:'^UFC*' } } } });
 </script>

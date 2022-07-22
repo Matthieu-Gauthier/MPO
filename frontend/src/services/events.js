@@ -22,6 +22,7 @@ export const useEvents = defineStore({
    id: 'events',
    servicePath,
    Model: Event,
+   whitelist: ['$regex']
 });
 
 api.service(servicePath).hooks({});
